@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DXBox xmlns="http://sudrf.ru/int/dx/1.0">
+    <DXDirection>
+        <Sender>
+            <Org>ПТК ВИВ</Org>
+        </Sender>
+        <Recipient>
+            <Org>AM00.1</Org>
+        </Recipient>
+    </DXDirection>
+    <DXReceipt id="021dad48-b11a-4185-9897-ee026da1ed6f" reply_to_type="DXBox" type="ptkviv_dx_flk" time_sent="2021-02-08T15:02:52.594+03:00" time_src_rcv="2021-02-08T15:02:52.587+03:00">
+        <Status>FAILURE</Status>
+        <ErrorMessage>errors: Content is not allowed in prolog.</ErrorMessage>
+    </DXReceipt>
+</DXBox>

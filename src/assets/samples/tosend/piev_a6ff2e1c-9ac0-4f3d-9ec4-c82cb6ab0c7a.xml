@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IId xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.fssprus.ru/namespace/id/2017/1">
+	<ExternalKey>50AS0041#А41-130/19#1</ExternalKey>
+	<Barcode>14120002799651</Barcode>
+	<IdType>1</IdType>
+	<IdDocNo>4.0</IdDocNo>
+	<IdDocDate>2019-12-09</IdDocDate>
+	<IdDeloNo>А41-130/19</IdDeloNo>
+	<DeloPlace>Арбитражный суд Московской области</DeloPlace>
+	<IDDesDate>2019-12-09</IDDesDate>
+	<AktDate>2019-12-09</AktDate>
+	<SrokPrIsp>3</SrokPrIsp>
+	<SrokPrIspType>3</SrokPrIspType>
+	<OrganOkogu>0014000</OrganOkogu>
+	<OrganCode>50AS0041</OrganCode>
+	<Organ>Арбитражный суд Московской области</Organ>
+	<OrganAdr>107053, проспект Академика Сахарова, д. 18, г. Москва</OrganAdr>
+	<OrganSignCodePost>26786 9 1 1110</OrganSignCodePost>
+	<OrganSign>Судья федерального суда</OrganSign>
+	<OrganSignFIO>Новикова Екатерина Михайловна</OrganSignFIO>
+	<IDConfidentiality>false</IDConfidentiality>
+	<IDSubjCode>1250000</IDSubjCode>
+	<IDSubjName>Задолженность</IDSubjName>
+	<Context>нрнриеккеипви</Context>
+	<IDSum>0</IDSum>
+	<IDSumCurrency>643</IDSumCurrency>
+	<ClaimerName>Абаев Анатолий Геннадьевич</ClaimerName>
+	<ClaimerType>2</ClaimerType>
+	<ClaimerBirthDate>1969-12-09</ClaimerBirthDate>
+	<ClaimerBirthPlace>Москва</ClaimerBirthPlace>
+	<ClaimerAdr>125464, г. Москва, а/я 13</ClaimerAdr>
+	<DebtorName>Абаев Анатолий Геннадьевич</DebtorName>
+	<DebtorType>2</DebtorType>
+	<DebtorAdr>125464, г. Москва, а/я 13</DebtorAdr>
+	<DebtorBirthDate>1969-12-09</DebtorBirthDate>
+	<DebtorGender>мужской</DebtorGender>
+	<DebtorBirthPlace>Москва</DebtorBirthPlace>
+	<AltPayerId>0000000000000</AltPayerId>
+	<NpaActs>
+		<NPAType>1</NPAType>
+		<NpaCaption>Кодекс Российской Федерации об административных правонарушениях</NpaCaption>
+	</NpaActs>
+	<IdPaymentPropertiesId>
+		<RecpName>Абаев А. Г.</RecpName>
+		<RecpInn>456676776776</RecpInn>
+		<RecpKpp>0</RecpKpp>
+		<RecpBank>ааа</RecpBank>
+		<RecpBIK>576886564</RecpBIK>
+		<RekvSum>8900</RekvSum>
+	</IdPaymentPropertiesId>
+</IId>

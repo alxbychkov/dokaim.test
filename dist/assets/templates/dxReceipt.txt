@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DXBox xmlns="http://sudrf.ru/int/dx/1.0">
+    <DXDirection>
+        <Sender>
+            <Org>[# th:utext="${clientKey}" /]</Org>
+        </Sender>
+        <Recipient>
+            <Org>ПТКВИВ</Org>
+        </Recipient>
+    </DXDirection>
+	<DXReceipt id="[# th:utext="${receiptId}" /]" reply_to="[# th:utext="${replyTo}" /]" reply_to_type="DXPack">
+		<Status>SUCCESS</Status>
+	</DXReceipt>
+</DXBox>

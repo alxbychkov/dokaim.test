@@ -1,0 +1,1 @@
+%progdir%\modules\wget\bin\wget.exe -q --no-cache localhost/php/receiver.php

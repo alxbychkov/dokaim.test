@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DXBox xmlns="http://sudrf.ru/int/dx/1.0">
+    <DXDirection>
+        <Sender>
+            <Org>ПТК ВИВ</Org>
+        </Sender>
+        <Recipient>
+            <Org>AM00.1</Org>
+        </Recipient>
+    </DXDirection>
+    <DXReceipt id="f4413d55-2b09-4dbb-8eed-a71b7c47a93a" reply_to="6bb68641-5edf-4291-8c07-78e033837d27" reply_to_type="DXPack" type="ptkviv" time_sent="2021-02-08T12:06:22.281+03:00" time_src_rcv="2021-02-08T12:06:21.872+03:00">
+        <Status>SUCCESS</Status>
+        <ErrorMessage>Документ принят сервером. Идентификатор пакета отправителя 6bb68641-5edf-4291-8c07-78e033837d27</ErrorMessage><DocRef pack_id="6bb68641-5edf-4291-8c07-78e033837d27" receiver_id="8ea5652c-2036-4a5d-bc06-7024ee789a97" timestamp="2021-02-08T12:06:22.281+03:00"/>
+    </DXReceipt>
+</DXBox>

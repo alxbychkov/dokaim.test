@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<fssp:IId xmlns:fssp="http://www.fssprus.ru/namespace/id/2018/1">
+  <fssp:ExternalKey>50MS0095#2а-163/2020#1</fssp:ExternalKey>
+  <fssp:Barcode>140002050MS0095#2а-163/2020#1</fssp:Barcode>
+  <fssp:IdType>1</fssp:IdType>
+  <fssp:IdDocNo>50MS0095#2а-163/2020#1</fssp:IdDocNo>
+  <fssp:IdDocDate>2020-10-11</fssp:IdDocDate>
+  <fssp:IDCopy>2</fssp:IDCopy>
+  <fssp:IdDeloNo>2а-163/2020</fssp:IdDeloNo>
+  <fssp:DeloPlace>Судебный участок № 95 мирового судьи Красногорского судебного района Московской области</fssp:DeloPlace>
+  <fssp:IDDesDate>2020-10-11</fssp:IDDesDate>
+  <fssp:AktDate>2020-10-11</fssp:AktDate>
+  <fssp:SrokPrIsp>3</fssp:SrokPrIsp>
+  <fssp:SrokPrIspType>3</fssp:SrokPrIspType>
+  <fssp:Isimmediate>false</fssp:Isimmediate>
+  <fssp:DebtorEstate>уст часть</fssp:DebtorEstate>
+  <fssp:OrganOkogu>1400020</fssp:OrganOkogu>
+  <fssp:OrganCode>50MS0095</fssp:OrganCode>
+  <fssp:Organ>Судебный участок № 95 мирового судьи Красногорского судебного района Московской области</fssp:Organ>
+  <fssp:OrganAdr>643,143409,,,Красногорск,,Братьев Горожанкиных,32,1</fssp:OrganAdr>
+  <fssp:OrganSignCodePost>24230 6 2 2422</fssp:OrganSignCodePost>
+  <fssp:OrganSign>Мировой судья</fssp:OrganSign>
+  <fssp:OrganSignFIO>Игнатова Наталья Владимировна</fssp:OrganSignFIO>
+  <fssp:IDConfidentiality>false</fssp:IDConfidentiality>
+  <fssp:IDSubjCode>1090400</fssp:IDSubjCode>
+  <fssp:IDSubjName>Взыскание налогов и сборов, включая пени</fssp:IDSubjName>
+  <fssp:Context>рез часть</fssp:Context>
+  <fssp:IDSum>3000.00</fssp:IDSum>
+  <fssp:IDSumCurrency>643</fssp:IDSumCurrency>
+  <fssp:ClaimerName>ИФНС тест</fssp:ClaimerName>
+  <fssp:ClaimerType>1</fssp:ClaimerType>
+  <fssp:ClaimerINN>1212121212</fssp:ClaimerINN>
+  <fssp:ClaimerKPP>123456789</fssp:ClaimerKPP>
+  <fssp:ClaimerOgrn>1212121212121</fssp:ClaimerOgrn>
+  <fssp:ClaimerAdr>643,142603,50,,,Балашиха,Майская,1стр1,</fssp:ClaimerAdr>
+  <fssp:ClaimerAdrFakt>643,142603,50,,,Балашиха,Майская,1стр1,</fssp:ClaimerAdrFakt>
+  <fssp:DebtorName>Мин Леон Константинович</fssp:DebtorName>
+  <fssp:DebtorType>2</fssp:DebtorType>
+  <fssp:DebtorINN>400805442424</fssp:DebtorINN>
+  <fssp:DebtorAdr>643,,40,,,,,,</fssp:DebtorAdr>
+  <fssp:DebtorAdrFakt>643,,40,,,,,,</fssp:DebtorAdrFakt>
+  <fssp:DebtorBirthDate>1953-08-20</fssp:DebtorBirthDate>
+  <fssp:DebtorGender>женский</fssp:DebtorGender>
+  <fssp:DebtorBirthPlace>Калужская обл Куйбышевский р-н   Закрутое с</fssp:DebtorBirthPlace>
+  <fssp:NpaActs>
+    <fssp:NPAType>6</fssp:NPAType>
+    <fssp:NpaCaption>Гражданский кодекс Российской Федерации</fssp:NpaCaption>
+    <fssp:NpaArticleParts>
+      <fssp:NpaArticle>98</fssp:NpaArticle>
+      <fssp:NpaArticleType>3</fssp:NpaArticleType>
+      <fssp:NpaArticleParts>
+        <fssp:NpaArticle>1</fssp:NpaArticle>
+        <fssp:NpaArticleType>7</fssp:NpaArticleType>
+      </fssp:NpaArticleParts>
+    </fssp:NpaArticleParts>
+  </fssp:NpaActs>
+</fssp:IId>

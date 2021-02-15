@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DXBox xmlns="http://sudrf.ru/int/dx/1.0">
+    <DXDirection>
+        <Sender>
+            <Org>AM00.1</Org>
+        </Sender>
+        <Recipient>
+            <Org>ПТКВИВ</Org>
+        </Recipient>
+    </DXDirection>
+    <DXPack id="5160d14d-dd30-4ced-92a2-e03c3738b768">
+        <Document>
+            <DataStr><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:ExecutionDocumentsRequest xmlns="urn://x-artifacts-fssp-ru/mvv/smev3/container/1.1.0" xmlns:ns2="urn://x-artifacts-fssp-ru/mvv/smev3/attachments/1.1.0" xmlns:ns3="urn://x-artifacts-fssp-ru/mvv/smev3/execution-documents/1.1.1">
+    <ID>5160d14d-dd30-4ced-92a2-e03c3738b768</ID>
+    <Date>2021-01-28T02:50:50</Date>
+    <SenderID>SDEP02</SenderID>
+    <SenderDepartmentCode>AM00.1</SenderDepartmentCode>
+    <ReceiverID>FSSP01</ReceiverID>
+    <ReceiverDepartmentCode></ReceiverDepartmentCode>
+    <Document>
+        <ID>50MS0095#2а-158/2020#1</ID>
+        <Type>I_ID</Type>
+        <DocumentNumber>50MS0095#2а-158/2020#1</DocumentNumber>
+        <AttachmentsBlock>
+            <ns2:AttachmentDescription>
+                <ns2:AttachmentFormat>
+                    <ns2:IsUnstructuredFormat>false</ns2:IsUnstructuredFormat>
+                    <ns2:IsZippedPacket>true</ns2:IsZippedPacket>
+                    <ns2:StructuredFormatType>http://www.fssprus.ru/namespace/id/2018/1</ns2:StructuredFormatType>
+                </ns2:AttachmentFormat>
+                <ns2:AttachmentFilename>piev_ac609a88-b1e5-4a13-86b7-f3500b62d9c2.zip</ns2:AttachmentFilename>
+            </ns2:AttachmentDescription>
+        </AttachmentsBlock>
+    </Document>
+</ns3:ExecutionDocumentsRequest>]]></DataStr>
+        </Document>
+        <Attachments>
+            <Attachment>
+                <File>piev_ac609a88-b1e5-4a13-86b7-f3500b62d9c2.zip</File>
+                <Data>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</Data>
+            </Attachment>
+        </Attachments>
+    </DXPack>
+</DXBox>

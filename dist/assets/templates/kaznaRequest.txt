@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request xmlns="urn://x-artefacts-sdvs/smev3-sdvs-id-ogv/1.0.0">
+	<ID>[# th:utext="${requestId}" /]</ID>
+	<Date>[# th:utext="${requestDate}" /]</Date>
+	<SenderID>SDEP02</SenderID>
+	<SenderDepartmentCode>[# th:utext="${clientKey}" /]</SenderDepartmentCode>
+	<ReceiverID>RKZN02</ReceiverID>
+	<ReceiverDepartmentCode>[# th:utext="${receiverDepartmentCode}" /]</ReceiverDepartmentCode>
+	<Document>
+		<ID>[# th:utext="${documentId}" /]</ID>
+		<Type>Исполнительный документ</Type>
+		<DocumentDate>[# th:utext="${documentDate}" /]</DocumentDate>
+		<DocumentNumber>[# th:utext="${documentNumber}" /]</DocumentNumber>
+		<AttachmentsBlock>
+			<AttachmentDescription>
+				<AttachmentFormat>
+					<IsUnstructuredFormat>false</IsUnstructuredFormat>
+					<IsZippedPacket>true</IsZippedPacket>
+					<StructuredFormatType>http://www.sudrf.ru/namespace/idogv/2020/1</StructuredFormatType>
+				</AttachmentFormat>
+				<AttachmentFilename>[# th:utext="${fileName}" /]</AttachmentFilename>
+			</AttachmentDescription>
+		</AttachmentsBlock>
+	</Document>
+</Request>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DXBox xmlns="http://sudrf.ru/int/dx/1.0">
+    <DXDirection>
+        <Sender>
+            <Org>[# th:utext="${clientKey}" /]</Org>
+        </Sender>
+        <Recipient>
+            <Org>ПТКВИВ</Org>
+        </Recipient>
+    </DXDirection>
+    <DXPack id="[# th:utext="${packId}" /]">
+        <Document>
+            <DataStr>[# th:utext="${documentContent}" /]</DataStr>
+        </Document>
+        <Attachments>
+            <Attachment>
+                <File>[# th:utext="${fileName}" /]</File>
+                <Data>[# th:utext="${fileContent}" /]</Data>
+            </Attachment>
+        </Attachments>
+    </DXPack>
+</DXBox>

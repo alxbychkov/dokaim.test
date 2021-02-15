@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <DXBox xmlns="http://sudrf.ru/int/dx/1.0">
+        <DXDirection>
+            <Sender>
+                <Org>ПТК ВИВ</Org>
+            </Sender>
+            <Recipient>
+                <Org>AM00.1</Org>
+            </Recipient>
+        </DXDirection>
+        <DXReceipt id="cc4a5e05-e5e2-4b27-9fc0-a1e2ad44f521" reply_to="f8fe8857-57a4-408f-bb7e-9c7dede1496c" reply_to_type="DXPack" type="smev" time_sent="2021-02-04T18:32:31.678+03:00" time_src_rcv="2021-02-04T18:32:31.676+03:00">
+            <Status>SUCCESS</Status>
+            <ErrorMessage>Успешно отправлено в ФССП.</ErrorMessage>
+            <DocRef pack_id="f8fe8857-57a4-408f-bb7e-9c7dede1496c" receiver_id="c6ac0698-04f7-4217-9f61-194028111482" timestamp="2021-02-04T18:32:31.683+03:00"/>
+        </DXReceipt>
+    </DXBox>

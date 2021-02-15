@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:ExecutionDocumentsRequest xmlns="urn://x-artifacts-fssp-ru/mvv/smev3/container/1.1.0" xmlns:ns2="urn://x-artifacts-fssp-ru/mvv/smev3/attachments/1.1.0" xmlns:ns3="urn://x-artifacts-fssp-ru/mvv/smev3/execution-documents/1.1.1">
+    <ID>[# th:utext="${requestId}" /]</ID>
+    <Date>[# th:utext="${requestDate}" /]</Date>
+    <SenderID>SDEP02</SenderID>
+    <SenderDepartmentCode>[# th:utext="${clientKey}" /]</SenderDepartmentCode>
+    <ReceiverID>FSSP01</ReceiverID>
+    <ReceiverDepartmentCode>[# th:utext="${receiverDepartmentCode}" /]</ReceiverDepartmentCode>
+    <Document>
+        <ID>[# th:utext="${documentId}" /]</ID>
+        <Type>I_ID</Type>
+        <DocumentDate>[# th:utext="${documentDate}" /]</DocumentDate>
+        <DocumentNumber>[# th:utext="${documentNumber}" /]</DocumentNumber>
+        <AttachmentsBlock>
+            <ns2:AttachmentDescription>
+                <ns2:AttachmentFormat>
+                    <ns2:IsUnstructuredFormat>false</ns2:IsUnstructuredFormat>
+                    <ns2:IsZippedPacket>true</ns2:IsZippedPacket>
+                    <ns2:StructuredFormatType>http://www.fssprus.ru/namespace/id/2018/1</ns2:StructuredFormatType>
+                </ns2:AttachmentFormat>
+                <ns2:AttachmentFilename>[# th:utext="${fileName}" /]</ns2:AttachmentFilename>
+            </ns2:AttachmentDescription>
+        </AttachmentsBlock>
+    </Document>
+</ns3:ExecutionDocumentsRequest>

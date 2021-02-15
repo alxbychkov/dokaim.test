@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request xmlns="urn://x-artefacts-sdvs/smev3-sdvs-id-ogv/1.0.0">
+	<ID>[# th:utext="${requestId}" /]</ID>
+	<Date>[# th:utext="${requestDate}" /]</Date>
+	<SenderID>SDEP02</SenderID>
+	<SenderDepartmentCode>[# th:utext="${clientKey}" /]</SenderDepartmentCode>
+	<ReceiverID>RKZN02</ReceiverID>
+	<ReceiverDepartmentCode>[# th:utext="${receiverDepartmentCode}" /]</ReceiverDepartmentCode>
+	<RequestDocumentStatus>
+		<ID>[# th:utext="${documentId}" /]</ID>
+		<Type>Исполнительный документ</Type>
+		<DocumentDate>[# th:utext="${documentDate}" /]</DocumentDate>
+		<DocumentNumber>[# th:utext="${documentNumber}" /]</DocumentNumber>
+	</RequestDocumentStatus>
+</Request>

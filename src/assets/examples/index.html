@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример использования cryptoPro</title>
+</head>
+<body>
+    <form name="createSignature" novalidate>
+        <fieldset>
+            <legend>Создание подписи</legend>
+            <!--[if gte IE 10]><!-->
+            <label for="messageFile">Файл для подписи:</label>
+            <br/>
+            <input id="messageFile" type="file">
+            <pre id="messageFileError"></pre>
+            <!--<![endif]-->
+            <hr>
+            <pre id="test"></pre>
+            <hr>
+
+            <label for="certificate">Сертификат: *</label>
+            <br>
+            <select id="certificate" tabindex="-1" required>
+                <option disabled selected>Не выбран</option>
+            </select>
+            <pre id="certificateListError"></pre>
+
+            <label>Тип подписи: *</label>
+            <br>
+            <label><input type="radio" name="signatureType" value="0">Совмещенная</label>
+            <br>
+            <label><input type="radio" name="signatureType" value="1" checked>Отделенная</label>
+            <br><br>
+
+            <hr>
+            <button id="createSignature" type="submit" disabled>Создать подпись</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Результат</legend>
+            <label for="hash">Хеш (ГОСТ Р 34.11-2012 256 бит):</label><br>
+            <textarea id="hash" cols="80" rows="5" placeholder="Не вычислен"></textarea>
+            <br>
+            <pre id="hashError"></pre>
+
+            <label for="signature">Подпись (PKCS7):</label><br>
+            <textarea id="signature" cols="80" rows="30" placeholder="Не создана"></textarea>
+            <pre id="signatureError"></pre>
+
+            <p>
+                Для
+                <a href="https://www.gosuslugi.ru/pgu/eds/"
+                   target="_blank"
+                   rel="nofollow noopener noreferrer"
+                   title="Перейти к проверке подписи">проверки</a>
+                нужно создать файл со сгенерированной подписью в кодировке UTF-8 с расширением *.sgn
+                <br>
+                для отделенной подписи (или *.sig для совмещенной).
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Информация о системе</legend>
+            <pre id="systemInfo"></pre>
+            <pre id="systemInfoError"></pre>
+        </fieldset>
+    </form>
+
+
+
+    <!-- Библиотека -->
+    <script src="dist/crypto-pro.js"></script>
+
+    <!-- Демо скрипты -->
+    <script src="cert-list.js"></script>
+    <script src="create-sign.js"></script>
+    <script src="get-env-info.js"></script>
+    <script src="show-cert.js"></script>
+<script>
+  document.getElementById('messageFile').onchange = function (event) {
+  var file = event.target.files[0]
+  var reader = new FileReader()
+  reader.onloadend = function () {
+    console.log('RESULT', reader.result)
+    document.getElementById('test').innerHTML = '<a href="' + reader.result + '">aaaaaa</a>';
+  }
+  reader.readAsDataURL(file)
+  
+}
+</script>
+</body>
+</html>
