@@ -68,13 +68,13 @@ class makeDxFile {
     // запускаем инициализацию
     public function init() {
         $this->data['xmlFile'] = $this->saveFiles($this->sendFolder, $this->files);
-        // $this->data['xmlFile'] || $this->data['errorMessage'] .= 'Problems to save file; ';
+        $this->removeBOM($this->sendFolder . '/' . $this->data['xmlFile']);
         if (!$this->data['xmlFile']) {
             $this->data['errorMessage'] .= 'Problems to save file; ';
             $this->data['status'] = false;
             return $this->data;
         }
-        $this->data['sigFile'] = $this->createFile($this->sendFolder, '', $this->data['xmlFile'], $this->data['signature'], 'sig');
+        $this->data['sigFile'] = $this->createFile($this->sendFolder, '', $this->data['xmlFile'], base64_decode($this->data['signature']), 'sig');
         $this->data['archive'] = $this->createZip($this->sendFolder, $this->data['xmlFile'], [$this->data['xmlFile'], $this->data['sigFile']]);
         $this->data['archive64'] = $this->encodeFile($this->sendFolder, $this->data['archive']);
         $this->replaceDataAndMakeDxFile();
@@ -188,5 +188,21 @@ class makeDxFile {
     // вспомогательная функция для замены
     private function changeData($arrSearch, $arrReplace, $template) {
         return str_replace($arrSearch, $arrReplace, $template);
+    }
+
+    // удалить BOM из строки
+    private function removeBOM($filename) {
+        if (file_exists($filename)) {
+            $newStr = file_get_contents($filename);
+            if(substr($newStr, 0, 3) == pack('CCC', 0xef, 0xbb, 0xbf)) {
+                $newStr = substr($newStr, 3);
+                $fp = fopen($filename, "w");
+                fwrite($fp, $newStr);
+                fclose($fp);
+            }
+            return;
+        } else {
+            $this->data['errorMessage'] .= "File {$filename} could not change encoding; ";
+        }
     }
 }

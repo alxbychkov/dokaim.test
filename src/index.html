@@ -9,19 +9,22 @@
     <div id="app">
         <form class="window__wrapper" action="php/getFile.php" method="POST" name="createSignature" novalidate data-type="form" enctype="multipart/form-data">
             <div class="body__window">
-                <div class="file__window">
-                    <input type="file" class="form__input" data-type="file">
+                <div class="select__window">
+                    <input type="file" class="form__input" data-type="file" multiple>
                     <label for="certificate">Сертификат:</label>
                     <select id="certificate" tabindex="-1" required class="form__select">
                         <option disabled selected>Не выбран</option>
                     </select>
                     <pre id="certificateListError"></pre>
+                </div>
+                <div class="file__window">
                     <input type="hidden" name="externalkey">
                     <input type="hidden" name="docnumber">
                     <input type="hidden" name="docdate">
+                    <select class="documents" name="documents" id="document" multiple></select>
+                    <textarea disabled class="preview__window"></textarea>
                 </div>
                 <!-- <div class="preview__window"></div>  -->
-                <textarea disabled class="preview__window"></textarea>
                 <!-- <xmp lang="xml" class="preview__window"></xmp> -->
             </div>
             <div class="select__window">

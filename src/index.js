@@ -14,8 +14,27 @@ import {parseXML} from './core/xmlParser'
 
 
 // eslint-disable-next-line no-unused-vars
-function readFile(input) {
-    const file = input.files[0]
+function loadFiles(input) {
+    const documents = document.querySelector('select[name=documents]')
+    const files = input.files
+    if (documents && files) {
+        documents.innerHTML = '';
+        [...files].forEach((file, index) => {
+            const fileName = document.createElement('option')
+            fileName.value = index
+            fileName.innerHTML = file.name
+            documents.append(fileName)
+        })
+        if ([...files].length == 1) {
+            readFile(input, 0)
+        } else {
+            document.querySelector('.preview__window').innerHTML = ''
+        }
+    }
+}
+
+function readFile(input, i) {
+    const file = input.files[i]
     const reader = new FileReader()
     const exKEy = document.querySelector('input[name=externalkey]')
     const docNo = document.querySelector('input[name=docnumber]')
@@ -24,10 +43,6 @@ function readFile(input) {
     reader.readAsText(file)
     reader.onload = function() {
         document.querySelector('.preview__window').innerHTML = reader.result
-        // const frame = document.createElement('iframe')
-        // frame.type = 'application/xml'
-        // document.querySelector('.preview__window').appendChild(frame)
-        // frame.contentWindow.document.write(reader.result)
         if (parseXML(reader.result)) {
             exKEy.value = parseXML(reader.result)['externalKey']
             docNo.value = parseXML(reader.result)['docNumber']
@@ -40,9 +55,17 @@ function readFile(input) {
 }
 
 const fileInput = document.querySelector('input[data-type="file"]')
-fileInput.addEventListener('change', e=>{
-    readFile(e.target)
-})
+const documents = document.querySelector('select[name=documents]')
+
+if (documents && fileInput) {
+    fileInput.addEventListener('change', e=>{
+        loadFiles(e.target)
+    })
+    documents.addEventListener('change', e => {
+        const selectedIndex = e.target.selectedIndex
+        readFile(fileInput, selectedIndex)
+    })
+}
 
 const clear = document.querySelector('input[data-type="clear"]')
 clear.addEventListener('click', e=> {
@@ -53,6 +76,7 @@ clear.addEventListener('click', e=> {
     roomSelect.disabled = true
     roomId.disabled = true
     document.querySelector('input[type="submit"]').disabled = true
+    documents.innerHTML = ''
 })
 
 // выбираем организацию и получаем данные

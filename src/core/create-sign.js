@@ -18,7 +18,7 @@ function readFile(messageFile) {
     const fileReader = new FileReader()
     fileReader.readAsText(messageFile)
     fileReader.onload = function () {
-        document.querySelector('.preview__window').innerHTML = this.result
+        // document.querySelector('.preview__window').innerHTML = this.result
         resolve(this.result)
     }
 
@@ -35,7 +35,7 @@ function readFile(messageFile) {
 
 function createSignature(message, hash) {
     const thumbprint = $certificate.value
-    let detachedSignature = 0 // совмещенная подпись
+    let detachedSignature = 1 // совмещенная подпись
     let signaturePromise
 
     detachedSignature = Boolean(Number(detachedSignature))
@@ -45,8 +45,10 @@ function createSignature(message, hash) {
 
     if (detachedSignature) {
         signaturePromise = window.cryptoPro.createDetachedSignature(thumbprint, hash)
+        console.log(hash)
     } else {
         signaturePromise = window.cryptoPro.createAttachedSignature(thumbprint, message)
+        console.log(message)
     }
 
     signaturePromise.then(function (signature) {
@@ -61,7 +63,11 @@ function createSignature(message, hash) {
 }
 
 $createSignature.addEventListener('submit', function (event) {
-    const messageFile = $messageFile && $messageFile.files.length && $messageFile.files[0]
+    let messageFile = $messageFile && $messageFile.files.length && $messageFile.files[0]
+    if ($messageFile.files.length > 1) {
+        const i = document.querySelector('select[name=documents]').selectedIndex
+        messageFile = $messageFile.files[i]
+    }
     let messagePromise = Promise.resolve('')
 
     if (messageFile) {
@@ -88,14 +94,13 @@ function sendData(form, signature, hash, file) {
     fd.append('hash', hash)
     fd.append('signature', signature)
     fd.append('file', file)
-    // xhr.open( 'POST', '/php/getFile.php', true )
     xhr.open( 'POST', '/php/index.php', true )
     xhr.addEventListener('readystatechange', () => {
     if (xhr.readyState === 4 && xhr.status === 200) {
         const data = JSON.parse(xhr.responseText) // получаем ответ
         console.log(data)
         if (data.status) {
-            document.querySelector('input[data-type="clear"]').click()
+            // document.querySelector('input[data-type="clear"]').click()
             alert('File send')
         } else {
             alert('File send ERROR')
