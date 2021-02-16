@@ -1,11 +1,18 @@
 /* eslint-disable new-cap */
 /* eslint-disable no-undef */
 import './scss/index.scss'
+import '../node_modules/chosen-js/chosen.css'
 import './core/cert-list'
 import './core/show-cert'
 import './core/get-env-info'
 import './core/create-sign'
 import {parseXML} from './core/xmlParser'
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
+import 'chosen-js'
+
+
 
 // const parser = new DOMParser()
 // const xmlDoc = parser.parseFromString(xml, 'application/xml')
@@ -127,6 +134,8 @@ function insertRoomData(room, data) {
             room.disabled = false
             roomId.value = ''
             roomId.disabled = true
+            // $(room).chosen({disable_search_threshold: 10}).change()
+            // $("#form_field").chosen()
         } else {
             room.disabled = true
             roomId.value = ''
@@ -136,6 +145,7 @@ function insertRoomData(room, data) {
 }
 
 if (roomSelect && roomId) {
+    
     roomSelect.addEventListener('change', e => {
         const valueId = e.target.value
         roomId.value = valueId

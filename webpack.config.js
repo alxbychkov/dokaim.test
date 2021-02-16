@@ -1,4 +1,5 @@
 const path = require('path')
+webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
@@ -48,6 +49,10 @@ module.exports = {
     hot: isDev
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'index.html',
@@ -108,7 +113,19 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: jsLoaders()
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   }
 }
